@@ -7,13 +7,12 @@ import { FiEye, FiEyeOff } from 'react-icons/fi';
 const backgroundImageUrl =
   'https://images.pexels.com/photos/388415/pexels-photo-388415.jpeg';
 
-// Varian animasi untuk "shake"
 const shakeVariants = {
   initial: {
     x: 0
   },
   shake: {
-    x: [-10, 10, -10, 10, -5, 5, 0], // Animasi gemetar
+    x: [-10, 10, -10, 10, -5, 5, 0],
     transition: { duration: 0.4, ease: "easeInOut" }
   },
 };
@@ -28,7 +27,8 @@ function Login() {
   const navigate = useNavigate();
   const location = useLocation();
   const { login, isAuthenticated } = useAuth(); 
-  const from = location.state?.from?.pathname || '/products'; 
+  
+  const from = location.state?.from?.pathname || '/home'; 
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -62,13 +62,13 @@ function Login() {
       
       <motion.form
         onSubmit={handleLogin}
-        className="relative w-full max-w-md bg-white/90 p-6 sm:p-8 rounded-2xl shadow-2xl backdrop-blur-md z-10 border-t-4 border-green-600 "
+        className="relative w-full max-w-md bg-white/90 p-6 sm:p-8 rounded-2xl shadow-2xl backdrop-blur-md z-10 border-t-4 border-green-600"
         initial={{ opacity: 0, scale: 0.8, y: 50 }}
         animate={{ 
           opacity: 1, 
           scale: 1, 
           y: 0,
-           ...shakeVariants[error ? 'shake' : 'initial']
+          ...shakeVariants[error ? 'shake' : 'initial']
         }}
         transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
       >
@@ -119,7 +119,7 @@ function Login() {
         <button
           type="submit"
           disabled={isLoading} 
-          className={`w-full text-white font-semibold py-2 rounded-md transition duration-200 cursor-pointer
+          className={`w-full text-white font-semibold py-2 rounded-md transition duration-200 
             ${isLoading 
               ? 'bg-gray-400 cursor-not-allowed' 
               : 'bg-green-600 hover:bg-green-700'
@@ -130,7 +130,7 @@ function Login() {
         </button>
 
         <p className="mt-4 text-sm text-gray-600 text-center">
-          Hint : username = admin, password = 1234
+          Hint : username = admin || password = 1234
         </p>
       </motion.form>
     </div>

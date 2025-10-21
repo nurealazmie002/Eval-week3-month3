@@ -23,8 +23,9 @@ function Navbar() {
 
   return (
     <nav className="relative bg-green-600 text-white px-4 sm:px-8 py-4 flex justify-between items-center shadow-md sticky top-0 z-50">
+      
       <Link
-        to="/products"
+        to="/home"
         onClick={closeMenu}
         className="font-extrabold text-xl cursor-pointer tracking-wide"
       >
@@ -39,6 +40,19 @@ function Navbar() {
 
       {isAuthenticated && (
         <ul className="hidden md:flex gap-6 items-center">
+          
+          <li>
+            <NavLink
+              to="/home"
+              className={({ isActive }) =>
+                `hover:text-green-100 transition ${
+                  isActive ? 'font-semibold underline' : ''
+                }`
+              }
+            >
+              Home
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to="/products"
@@ -85,8 +99,21 @@ function Navbar() {
         >
           <li className="w-full text-center">
             <NavLink
+              to="/home"
+              onClick={closeMenu} 
+              className={({ isActive }) =>
+                `block py-2 hover:text-green-100 transition ${
+                  isActive ? 'font-semibold underline' : ''
+                }`
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="w-full text-center">
+            <NavLink
               to="/products"
-              onClick={closeMenu}
+              onClick={closeMenu} 
               className={({ isActive }) =>
                 `block py-2 hover:text-green-100 transition ${
                   isActive ? 'font-semibold underline' : ''

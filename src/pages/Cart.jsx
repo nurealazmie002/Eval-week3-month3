@@ -65,7 +65,7 @@ function Cart() {
               onClick={handleCheckout}
               className="w-full bg-green-600 text-white font-semibold py-2 rounded-md hover:bg-green-700 transition"
             >
-              Lanjutkan ke Checkout
+              Lanjutkan Checkout
             </button>
             <button
               onClick={clearCart}
