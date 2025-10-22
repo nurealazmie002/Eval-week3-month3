@@ -35,7 +35,7 @@ function Cart() {
           {cartItems.map((item) => (
             <div key={item.id} className="flex bg-white p-3 sm:p-4 rounded-lg shadow-md items-center">
               <img src={item.image} alt={item.title} className="w-16 h-16 sm:w-20 sm:h-20 object-contain mr-4" />
-              <div className="flex-grow">
+              <div className="grow">
                 <h2 className="font-semibold text-gray-800 line-clamp-2">{item.title}</h2>
                 <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
                 <p className="font-semibold text-green-600">${item.price}</p>

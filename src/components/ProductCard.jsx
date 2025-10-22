@@ -20,7 +20,7 @@ function ProductCard({ product }) {
         alt={product.title}
         className="h-48 w-full object-contain mb-3 rounded-md" 
       />
-      <div className="flex-grow">
+      <div className="grow">
         <h3 className="font-semibold text-gray-800 mb-1 text-sm line-clamp-2">
           {product.title}
         </h3>
