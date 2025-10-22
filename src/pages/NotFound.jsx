@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] bg-gradient-to-b from-green-50 to-white px-6">
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] bg-linear-to-b from-green-50 to-white px-6">
       <h2 className="text-4xl font-extrabold text-green-600 mb-4 animate-pulse">
         404 - Halaman Tidak Ditemukan
       </h2>

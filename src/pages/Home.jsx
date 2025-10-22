@@ -5,7 +5,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-b from-green-50 to-white min-h-[calc(100vh-145px)] sm:min-h-[calc(100vh-120px)] flex flex-col items-center justify-center px-6 py-12">
+    <div className="bg-linear-gradient from-green-50 to-white min-h-[calc(100vh-145px)] sm:min-h-[calc(100vh-120px)] flex flex-col items-center justify-center px-6 py-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

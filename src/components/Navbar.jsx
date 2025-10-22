@@ -22,7 +22,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="relative bg-green-600 text-white px-4 sm:px-8 py-4 flex justify-between items-center shadow-md sticky top-0 z-50">
+    <nav className=" bg-green-600 text-white px-4 sm:px-8 py-4 flex justify-between items-center shadow-md sticky top-0 z-50">
       
       <Link
         to="/home"
